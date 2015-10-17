@@ -10,3 +10,10 @@ It still uses high level OpenSSL calls in order to guess the password.  As an op
     pemcracker <path to pem> <word file>
 
     pemcracker 0.1.0 by Brian Wallace (@botnet_hunter)
+
+
+Usage Example
+-------------
+
+    bwall@ragnarok:~/data/publicprojects/pemcracker$ ./pemcracker test.pem test.dict
+    Password is komodia for test.pem
