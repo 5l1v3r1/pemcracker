@@ -17,3 +17,11 @@ Usage Example
 
     bwall@ragnarok:~/data/publicprojects/pemcracker$ ./pemcracker test.pem test.dict
     Password is komodia for test.pem
+
+Compiling
+---------
+
+    make
+
+
+This is somewhat of a short side project, so my apologies for any issues.  If there is desire for this project to be further developed, I will try to allocate time.
