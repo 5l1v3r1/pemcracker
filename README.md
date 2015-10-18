@@ -25,3 +25,9 @@ Compiling
 
 
 This is somewhat of a short side project, so my apologies for any issues.  If there is desire for this project to be further developed, I will try to allocate time.
+
+
+Alternatives
+------------
+
+If you are looking for the fastest possible method of brute forcing PEM files, you may wish to try out John the Ripper.  Its little known ssh2john.py script allows for converting PEM files to a format that can be fed into ./john.  [Details](http://www.openwall.com/lists/john-users/2015/10/18/2)
