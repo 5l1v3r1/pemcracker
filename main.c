@@ -11,7 +11,7 @@
 #include <openssl/rsa.h>
 #include <openssl/pem.h>
 
-#ifdef _WIN32 || _WIN64
+#if defined(_WIN32) || defined(_WIN64)
 #include <Windows.h>
 #define msleep(x) Sleep(x)
 #else
@@ -37,7 +37,7 @@ struct timeval startTime;
 int GetCoreCount()
 {
     int cores = 1;
-    #ifdef _WIN32 || _WIN64
+    #if defined(_WIN32) || defined(_WIN64)
         SYSTEM_INFO sysinfo;
         GetSystemInfo( &sysinfo );
         cores = sysinfo.dwNumberOfProcessors;
@@ -153,7 +153,7 @@ int main(int argc, char ** argv)
             threads.push_back(cThread);
             blobs.push_back(new queue<Blob>());
             pthread_mutex_t * mutex = new pthread_mutex_t();
-            *mutex = PTHREAD_MUTEX_INITIALIZER;
+            *mutex = (pthread_mutex_t) PTHREAD_MUTEX_INITIALIZER;
             mutexes.push_back(mutex);
             pthread_create(cThread, NULL, crackThread, (void*)x);
         }
